@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embrace your potential!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <div id="header-container"></div>
+
+    <script>
+        // Dynamically load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="herotextbox">
+        <h1>Find Your Next Job Abroad</h1>
+        <p>We believe everyone has unique potential, and we’re here to help you unlock it. Whether you're looking to 
+            take the next step in your career or embark on an exciting adventure abroad, we're committed to supporting 
+            you every step of the way. Your future is full of possibilities, and it starts here.</p>
+        <a href="offers.html" class="btn">Explore Opportunities</a>
+    </div>
+        <img src="images/home.png" alt="happy woman at the beach">
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li><b>🔍 More than a job</b>
+            <p>It’s an adventure and a great opportunity for professional and personal growth- it's an investment in the future. 
+            A new country brings new experiences, valuable skills, and the chance to start building an international career.</p></li>
+            <li><b>☀️ Sunny locations</b>
+            <p>A sunny Mediterranean destination offers more than beautiful landscapes. The warm climate and fresh sea air 
+            contribute to better health and increased energy levels. Sunshine naturally boosts mood and productivity, 
+            making it easier to enjoy both work and free time.</p></li>   
+            <li><b>🌊 New cultures</b>
+            <p>The Mediterranean lifestyle is full of richness and diversity. From vibrant markets and world-famous cuisine to a relaxed 
+            work-life balance, every day is an opportunity to embrace a new way of living. People from different 
+            backgrounds enhances adaptability, communication, and cultural awareness.</p></li>
+            <li><b>🤝 Guidance</b>
+            <p>From helping you find the right job to assisting with your relocation and offering ongoing assistance after your arrival to 
+            make sure you settle in comfortably, our team is here to ensure a smooth transition. You’re never alone on this journey—
+            our mentorship is with you every step of the way.</p></li>
+        </ul>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta">
+        <img src="images/home-contact.png" alt="friends at the beach">
+        <div class="ctatext">
+        <h2>Embrace Your Potential!</h2>
+        <p>We’d love to hear more about your career goals and help you find the perfect job abroad. Contact us now to learn more about 
+        our exciting opportunities and let us know your availability for a meeting!</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+    </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data)
+                .catch(error => console.log("Error loading footer:", error));
+        });
+    </script> 
+    
+    <script src="script.js"></script>
+</body>
+</html>

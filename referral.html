@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refer a friend</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <!-- Container for header loaded dynamically -->
+    <div id="header-container"></div>
+    
+    <script>
+        // Dynamically load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <!-- Referral Section -->
+    <section id="referral">
+        <h1>Refer a Friend</h1>
+        <p>Know someone looking for a job abroad? <br>
+            Refer them to us, and help them find their next adventure. <br>
+            Fill out the form below to get started.</p>
+
+        <!-- Referral Form -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="referrer-name">Your Name:</label>
+                    <input type="text" id="referrer-name" name="referrer-name" required placeholder="Your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="referrer-phone">Your Phone Number:</label>
+                    <input type="tel" id="referrer-phone" name="referrer-phone" placeholder="Your phone number" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="friend-name">Your Friend's First Name:</label>
+                    <input type="text" id="friend-name" name="friend-name" required placeholder="Friend's name">
+                </div>
+
+                <div class="form-group">
+                    <label for="friend-phone">Your Friend's Phone Number:</label>
+                    <input type="tel" id="friend-phone" name="friend-phone" required placeholder="Friend's phone number">
+                </div>
+            </div>
+
+            <button type="submit">Send Referral</button>
+        </form>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section id="disclaimer">
+        <div class="left-part">
+            <h2>Coming together or not?</h2>
+            <p>Candidates are encouraged to apply alongside their friends and refer as many people as they’d like! <br><br>
+
+                You have the flexibility to either apply together or choose to come in separately, whatever suits your schedule best.
+                Even though you might be working on different projects, the experience will still be a shared adventure, filled with opportunities 
+                to learn and grow together. While each of you may be on a unique professional path, the journey itself will connect you in 
+                meaningful ways by creating memories together, building connections, and sharing in the excitement of this incredible opportunity!</p>
+        </div>
+
+        <div class="right-part">
+            <img src="images/friends.png" alt="friends at the beach">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data)
+                .catch(error => console.log("Error loading footer:", error));
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <!-- Container for header loaded dynamically -->
+    <div id="header-container"></div>
+    
+    <script>
+        // Dynamically load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <section id="contact">
+        <h1>Get in Touch</h1>
+        <p></p>
+
+        <!-- Contact Form (Formspree) -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+            <label for="message">Your message:</label>
+            <textarea id="message" name="message">
+Hello Jobsun team,
+
+I’m interested in learning more about your job opportunities abroad. Please let me know how I can apply and if there are any available positions that match my profile.
+
+Looking forward to your response!
+            </textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Phone Contact Section -->
+    <section id="phone-contacts">
+        <h2>Prefer to Call?</h2>
+        <p>Our team is available to assist you in multiple languages.</p>
+
+        <div class="contacts">
+
+        <div class="contact-card">
+            <h3>Alexander</h3>
+            <p>Speaks: 🇩🇰🇬🇷🇬🇧</p>
+            <a href="tel:+4542523737" class="call-btn">📞 Call +45 42 52 37 37</a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Aspasia</h3>
+            <p>Speaks: 🇬🇷🇬🇧</p>
+            <a href="tel:+4552888195" class="call-btn">📞 Call +45 42 52 37 37</a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Christoffer</h3>
+            <p>Speaks: 🇩🇰🇳🇴🇬🇧</p>
+            <a href="tel:+4581988163" class="call-btn">📞 Call +45 81 98 81 63</a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Panagiotis</h3>
+            <p>Speaks: 🇸🇪🇬🇷🇬🇧</p>
+            <a href="tel:+4581957047" class="call-btn">📞 Call +45 81 98 81 63</a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Ioannis</h3>
+            <p>Speaks: 🇩🇪🇬🇷🇬🇧</p>
+            <a href="tel:+4917659985249" class="call-btn">📞 Call +45 81 98 81 63</a>
+        </div>
+
+        <div class="contact-card">
+            <h3>Dimitra</h3>
+            <p>Speaks: 🇩🇪🇬🇷🇬🇧</p>
+            <a href="tel:+4915172336165" class="call-btn">📞 Call +45 81 98 81 63</a>
+        </div>
+
+    </div>
+
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data)
+                .catch(error => console.log("Error loading footer:", error));
+        });
+    </script> 
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

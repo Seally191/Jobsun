@@ -1,0 +1,870 @@
+@font-face {
+    font-family: 'TAN MERINGUE';
+    src: url('fonts/TAN-MERINGUE.otf') format('otf'),
+         url('fonts/TAN-MERINGUE.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+    color: #0b385e;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 80px 10% 20px; /* Top: 120px, Left/Right: 10%, Bottom: 40px */
+    background: white;
+    min-height: 60vh; /* Adjust for a full-page feel */
+    gap: 60px;
+}
+
+/* Hero Text */
+#hero h1 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    color: #12609d;
+    margin-bottom: 15px;
+    max-width: 500px;
+}
+
+#hero p {
+    font-size: 1rem;
+    color: #12609d;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* Hero Button */
+#hero .btn {
+    display: inline-block;
+    background: #fad02c;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+#hero .btn:hover {
+    background: #e8bb0a;
+    transform: scale(1.05);
+}
+
+/* Hero Image */
+#hero img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    #hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+}
+
+/* Why Choose Us Section */
+#why-us {
+    text-align: center;
+    padding: 20px 10%;
+    background: #12609d;
+}
+
+#why-us h2 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+/* Flexbox Layout for the List */
+#why-us ul {
+    display: flex;
+    justify-content: space-between;  /* Distribute evenly */
+    flex-wrap: wrap;  /* Ensures responsiveness */
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Individual Item Box */
+#why-us li {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;  /* Allows equal width */
+    flex-direction: row;
+    align-items: center;
+    min-width: 100px; /* Ensures responsiveness */
+    max-width: 200px;
+    opacity: 1;
+}
+
+/* Show Text on Hover */
+#why-us li:hover {
+    opacity: 1; /* Show text when hovering */
+}
+
+/* Icons and Titles */
+#why-us li b {
+    font-size: 1.15rem;
+    display: block;
+    margin-bottom: 0px;
+    color: #12609d;
+    text-align: left;
+}
+
+/* Paragraph inside each box */
+#why-us li p {
+    font-size: 0.85rem;
+    text-align: left;
+    background: linear-gradient(170deg, #0b385e, #4f94cd); /* Adjust colors as needed */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block; /* Needed to apply gradient properly */
+}
+
+/* Responsive: Stack boxes on smaller screens */
+@media (max-width: 768px) {
+    #why-us ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #why-us li {
+        max-width: 100%;
+    }
+}
+
+/* Call to Action Section */
+#cta {
+    display: flex;
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
+    text-align: left;
+    padding: 60px 10%;
+    color: #12609d;
+    gap: 40px;
+}
+
+/* CTA Image (Left) */
+#cta img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* CTA Text Container (Right) */
+.ctatext {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; /* Vertically centers the text */
+    min-height: 100%; /* Ensures it fills the available height */
+}
+
+/* CTA Title */
+.ctatext h2 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    margin: 0 0 0px; /* Remove excess space on top and add more below */
+    max-width: 500px;
+}
+
+/* CTA Paragraph */
+.ctatext p {
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Adds space between text and button */
+}
+
+/* CTA Button */
+.ctatext .btn {
+    display: inline-block;
+    background: #cc50bd;
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    align-self: flex-start; /* Ensures button stays aligned left */
+}
+
+.ctatext .btn:hover {
+    background: #b346a7;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    #cta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #cta img {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .ctatext {
+        align-items: center;
+        text-align: center;
+    }
+
+    .ctatext .btn {
+        align-self: center; /* Centers button on small screens */
+    }
+}
+
+/* About Us Section */
+#about-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 10% 60px;
+    text-align: left;
+    background-color: white;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    color: #12609d;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #12609d;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .about-text {
+        max-width: 100%;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+}
+
+/* Pillars Section */
+#pillars {
+    text-align: center; /* Center everything inside */
+    padding: 0px 10% 0px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    background-color: #f4f8fc;
+}
+
+#pillars h2 {
+    font-family: 'TAN MERINGUE', sans-serif;
+    font-size: 1.75rem;
+    color: #12609d;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.pillars {
+    display: flex;
+    justify-content: center;
+    padding: 0px 5%;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.pillar {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    flex: 1;
+    min-width: 155px;
+    max-width: 200px;
+}
+
+.pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pillar img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0px;
+}
+
+.pillar h3 {
+    font-size: 1.15rem;
+    color: #12609d;
+    margin-bottom: 0px;
+}
+
+.pillar p {
+    font-size: 0.85rem;
+    color: #0b385e;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 2200px) {
+    .pillars {
+        justify-content: center;
+    }
+
+    .pillar {
+        max-width: 12%; /* Adjust to fit 5 per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .pillars {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pillar {
+        max-width: 80%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .pillars {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pillar {
+        max-width: 80%;
+    }
+}
+
+/* Team Section */
+#team {
+    padding: 30px 10% 50px;
+    text-align: center;
+    background: #12609d;
+    color: white;
+}
+
+#team h2 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+/* Team Grid */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Individual Team Member */
+.team-member {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover .team-photo {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 10% 40px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact h1 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    color: #12609d;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #12609d;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+form label {
+    font-size: 1rem;
+    color: #12609d;
+    text-align: left;
+    width: 100%;
+}
+
+form input,
+form textarea {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form button {
+    background-color: #fad02c;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e8bb0a;
+}
+
+/* Phone Contacts Section */
+#phone-contacts {
+    padding: 40px 10%;
+    background-color: #f4f8fc;
+    text-align: center;
+}
+
+#phone-contacts h2 {
+    font-family: 'TAN MERINGUE';
+    color: #12609d;
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+#phone-contacts p {
+    font-size: 1rem;
+    color: #12609d;
+    margin-bottom: 20px;
+}
+
+/* Flexbox for displaying contact cards in rows of 3 */
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;  /* Set max-width to allow 3 cards per row */
+    text-align: center;
+}
+
+.contact-card h3 {
+    font-size: 1rem;
+    color: #12609d;
+    margin: 5px 0 10px 0; /* Reduced margin-top, consistent with the bottom margin of the call button */
+}
+
+.contact-card p {
+    font-size: 0.85rem;
+    color: #0b385e;
+    margin-bottom: 20px;
+}
+
+.call-btn {
+    font-size: 1rem;
+    color: #12609d;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #12609d;
+    border-radius: 8px;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px; /* Added space below the call button */
+}
+
+.call-btn:hover {
+    background-color: #12609d;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #contact {
+        padding: 60px 5%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    #phone-contacts {
+        padding: 40px 5%;
+    }
+
+    .contact-card {
+        max-width: 90%; /* Adjust the card width on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #phone-contacts h2 {
+        font-size: 1.75rem;
+    }
+
+    form label,
+    form input,
+    form textarea,
+    form button {
+        font-size: 1rem;
+    }
+
+    .call-btn {
+        font-size: 1rem;
+    }
+
+    /* Stack the contact cards vertically on very small screens */
+    .contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+/* General Body and Container */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f8f8; /* Light gray background for the page */
+}
+
+#header-container,
+#footer-container {
+    width: 100%;
+}
+
+/* Referral Section */
+#referral {
+    padding: 80px 10% 40px;
+    background-color: #ffffff; /* White background */
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#referral h1 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    color: #12609d;
+    margin-bottom: 20px;
+}
+
+#referral p {
+    font-size: 1rem;
+    color: #12609d;
+    margin-bottom: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    flex: 1;
+}
+
+form label {
+    font-size: 1rem;
+    color: #12609d;
+    text-align: left;
+    width: 100%;
+}
+
+form input {
+    font-family: 'Montserrat', sans-serif;
+    width: 80%;
+    padding: 12px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+form button {
+    background-color: #fad02c;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e8bb0a;
+}
+
+/* Disclaimer Section */
+#disclaimer {
+    padding: 40px 10%;
+    background-color: #12609d; /* Dark blue background */
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#disclaimer h2 {
+    font-family: 'TAN MERINGUE';
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+}
+
+#disclaimer p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+#disclaimer ul {
+    list-style-type: '- ';;
+    padding: 0;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+#disclaimer ul li {
+    margin-bottom: 10px;
+}
+
+/* Left and Right Parts inside Disclaimer */
+#disclaimer .left-part {
+    flex: 1;
+    text-align: left;
+}
+
+#disclaimer .right-part {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#disclaimer img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #referral {
+        padding: 60px 5%;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    #disclaimer {
+        padding: 40px 5%;
+        flex-direction: column;
+    }
+
+    #disclaimer .left-part,
+    #disclaimer .right-part {
+        flex: 1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #disclaimer img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #referral h1 {
+        font-size: 1.5rem;
+    }
+
+    #disclaimer h2 {
+        font-size: 1.5rem;
+    }
+
+    form label,
+    form input,
+    form button {
+        font-size: 1rem;
+    }
+
+    #disclaimer ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Privacy Policy Section */
+#privacy-terms {
+    max-width: 900px;
+    margin: 100px auto 40px;
+    padding: 40px 10% 40px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#privacy-terms h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#privacy-terms h2 {
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+#privacy-terms p {
+    line-height: 1.6;
+    margin: 15px 0;
+}

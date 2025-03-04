@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <!-- Container for header loaded dynamically -->
+    <div id="header-container"></div>
+    
+    <script>
+        // Dynamically load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <!-- About Us Section -->
+    <section id="about-us">
+        <div class="about-image">
+            <img src="images/team.png" alt="working team">
+        </div>
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>At Jobsun, we believe that everyone has the potential to thrive in an exciting career abroad. Our mission is to provide tailored support, mentorship, and transparency every step of the way. We're more than just a job placement service; we're your partner in building a successful international career.</p>
+        </div>
+    </section>
+
+    <!-- Our Pillars Section -->
+    <section id="pillars">
+        <h2>Our Pillars</h2>
+        <div class="pillars">
+            <div class="pillar">
+                <img src="images/tailoredsupport.png" alt="tailored support">
+                <h3>Tailored Support</h3>
+                <p>We understand that each person has unique needs. That's why we provide personalized support to help you achieve your career goals and navigate the challenges of relocating abroad.</p>
+            </div>
+            <div class="pillar">
+                <img src="images/mentorship.png" alt="mentorship">
+                <h3>Mentorship</h3>
+                <p>Our team is with you every step of the way. From career advice to settling into a new country, we provide mentorship that helps you grow both professionally and personally.</p>
+            </div>
+            <div class="pillar">
+                <img src="images/transparency.png" alt="transparency">
+                <h3>Transparency</h3>
+                <p>We believe in clear, honest communication. With us, you’ll always know where you stand in the job application process, and what to expect when relocating abroad.</p>
+            </div>
+            <div class="pillar">
+                <img src="images/community.png" alt="community">
+                <h3>Community</h3>
+                <p>Joining Jobsun means becoming part of a global community. We connect talented individuals and foster an environment of mutual support and encouragement among our clients and team.</p>
+            </div>
+            <div class="pillar">
+                <img src="images/growth.png" alt="growth">
+                <h3>Growth</h3>
+                <p>We focus on your long-term success. Whether it's in your career, personal development, or adapting to a new culture, we’re here to help you grow and unlock your full potential.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <a href="mailto:alexander@jobsun.dk">
+                    <img src="images/AP.png" alt="Alexander Psyllos" class="team-photo">
+                </a>
+            </div>
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <a href="mailto:aspa@jobsun.eu">
+                    <img src="images/AK.png" alt="Aspasia Kavalogiou" class="team-photo">
+                </a>
+            </div>
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <a href="mailto:christoffer@jobsun.dk">
+                    <img src="images/CM.png" alt="Christoffer Mallios" class="team-photo">
+                </a>
+            </div>    
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <a href="mailto:panagiotis.dorizas@jobsun.gr">
+                    <img src="images/PD.png" alt="Panagiotis Dorizas" class="team-photo">
+                </a>
+            </div>     
+            <!-- Team Member 5 -->
+            <div class="team-member">
+                <a href="mailto:ioannis.kalpakidis@jobsun.gr">
+                    <img src="images/IK.png" alt="Ioannis Kalpakidis" class="team-photo">
+                </a>
+            </div>  
+            <!-- Team Member 6 -->
+            <div class="team-member">
+                <a href="mailto:dimitra@jobsun.gr">
+                    <img src="images/DF.png" alt="Dimitra Fakou" class="team-photo">
+                </a>
+            </div>  
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data)
+                .catch(error => console.log("Error loading footer:", error));
+        });
+    </script> 
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

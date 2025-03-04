@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <!-- Container for header loaded dynamically -->
+    <div id="header-container"></div>
+    
+    <script>
+        // Dynamically load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <section id="blog">
+        <h1>Our Blog</h1>
+        <p>Stay updated with the latest tips, news, and stories from Jobsun.</p>
+        
+        <div class="blog-posts">
+            <article class="blog-post">
+                <h2><a href="blog-post1.html">How to Find Your Dream Job Abroad</a></h2>
+                <p class="date">Posted on January 15, 2025</p>
+                <p>A few tips and insights on how to prepare for your career abroad. The adventure starts with the right job. Read more...</p>
+                <a href="blog-post1.html" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2><a href="blog-post2.html">The Benefits of Moving to a Mediterranean Country</a></h2>
+                <p class="date">Posted on January 12, 2025</p>
+                <p>Discover the incredible benefits of living in sunny Mediterranean countries and how it can improve both your work and personal life.</p>
+                <a href="blog-post2.html" class="btn">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h2><a href="blog-post3.html">How to Navigate Cultural Differences in the Workplace</a></h2>
+                <p class="date">Posted on January 10, 2025</p>
+                <p>Adapting to a new culture can be challenging but rewarding. Here's a guide to help you navigate cultural differences in the workplace.</p>
+                <a href="blog-post3.html" class="btn">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data)
+                .catch(error => console.log("Error loading footer:", error));
+        });
+    </script> 
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

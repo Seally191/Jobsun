@@ -1,0 +1,167 @@
+/* Header styles */
+header {
+    background: #4f94cd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: top 0.3s ease;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+/* Logo */
+header img {
+    max-height: 40px;
+    object-fit: contain;
+    width: auto;
+}
+
+/* Navigation container */
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align nav to the right */
+    align-items: center;
+    flex-grow: 1; /* Ensure nav takes all available space */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 16px;
+    transition: transform 0.1s ease-in-out;
+    display: inline-block;
+}
+
+nav a:hover {
+    transform: scale(1.1);
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: relative;
+    margin-left: 20px;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropbtn:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 120px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #12609d;
+    padding: 8px 12px;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
+
+/* Show dropdown on hover */
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Logo size adjustment on mobile */
+    header img {
+        max-height: 30px; /* Smaller logo on mobile */
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #12609d;
+        position: absolute;
+        top: 60px; /* Adjusted position */
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    /* Mobile language dropdown adjustment */
+    .language-dropdown {
+        position: relative;
+        margin-left: 0; /* Adjusted for mobile view */
+        margin-right: 20px; /* Giving space to the right */
+    }
+
+    .dropdown-content {
+        right: 0; /* Ensure it appears below the button */
+    }
+
+    /* Ensure no overlap of logo and language dropdown */
+    .burger-menu {
+        margin-right: 20px; /* Adjusted for spacing */
+    }
+
+    /* Make sure dropdown appears on mobile as well */
+    .language-dropdown .dropdown-content {
+        width: 100%; /* Make dropdown full width */
+        position: static; /* Remove absolute positioning for mobile */
+        box-shadow: none; /* Remove shadow */
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsun</title>
+    <link rel="stylesheet" href="header.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="images/logoheader.png" alt="Logo Jobsun"></a>
+    
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offers.html">Job offers</a></li>
+                <li><a href="blog.html">Articles</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="referral.html">Bring a friend!</a></li>
+            </ul>
+    
+            <!-- Language Dropdown -->
+            <div class="language-dropdown">
+                <button class="dropbtn">🇬🇧</button>
+                <div class="dropdown-content">
+                    <a href="?lang=en">English</a>
+                    <a href="?lang=da">Dansk</a>
+                    <a href="?lang=sv">Svenska</a>
+                    <a href="?lang=no">Norsk</a>
+                </div>
+            </div>
+    
+            <div class="burger-menu" id="burger-menu">&#9776;</div>
+        </nav>
+    </header>      
+
+    <script>
+        document.getElementById('burger-menu').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('active');  // Toggle active class
+        });
+
+        // Language Dropdown Toggle (For Click Instead of Hover)
+        document.querySelector(".dropbtn").addEventListener("click", function(event) {
+            event.stopPropagation();
+            document.querySelector(".dropdown-content").classList.toggle("show");
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener("click", function(e) {
+            if (!e.target.matches(".dropbtn")) {
+                document.querySelector(".dropdown-content").classList.remove("show");
+            }
+        });
+    </script>
+</body>
+</html>

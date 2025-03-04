@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy & Terms</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <!-- Container for header loaded dynamically -->
+    <div id="header-container"></div>
+    
+    <script>
+        // Dynamically load the header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <section id="privacy-terms">
+        <h1>Privacy Policy & Terms of Service</h1>
+
+        <h2>Privacy Policy</h2>
+        <p>At Jobsun, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and protect your personal information when you use our services.</p>
+
+        <h3>What Information We Collect</h3>
+        <p>We collect personal information such as your name, email address, phone number, and job preferences when you register, apply for a job, or contact us.</p>
+
+        <h3>How We Use Your Information</h3>
+        <p>Your information is used to process job applications, send relevant offers, and provide support throughout your job search. We do not sell your personal information to third parties.</p>
+
+        <h3>Data Security</h3>
+        <p>We take reasonable steps to protect your personal information from unauthorized access, disclosure, alteration, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+
+        <h2>Terms of Service</h2>
+        <p>By using Jobsun's services, you agree to the following terms and conditions:</p>
+
+        <h3>General Terms</h3>
+        <p>These terms govern your use of the Jobsun website and services. You must be at least 18 years old to apply for jobs or use our services. By submitting your details, you agree to receive job-related communication from us.</p>
+
+        <h3>Referral Terms</h3>
+        <p>If you refer a friend to Jobsun, you agree to the terms outlined in the Refer-a-Friend section. The referral fee is only payable if the referred candidate is successfully hired and completes a minimum of 3 months in the role.</p>
+
+        <h3>Changes to Privacy Policy and Terms</h3>
+        <p>We may update our privacy policy and terms of service from time to time. Any changes will be posted on this page, and the updated terms will take effect as of the posting date.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions regarding our privacy policy or terms of service, please contact us at <a href="mailto:contact@jobsun.dk">contact@jobsun.dk</a>.</p>
+    </section>
+
+    <div id="footer-container"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data)
+                .catch(error => console.log("Error loading footer:", error));
+        });
+    </script> 
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
