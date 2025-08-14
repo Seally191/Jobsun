@@ -13,7 +13,7 @@
 
     <!-- Container for header loaded dynamically -->
     <div id="header-container"></div>
-    
+
     <script>
         // Dynamically load the header
         fetch('header.html')
@@ -23,18 +23,6 @@
             })
             .catch(error => console.log("Error loading header: ", error));
     </script>
-
-<!-- Header -->
-<div id="header-container"></div>
-<script>
-    // Dynamically load the header
-    fetch('header.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('header-container').innerHTML = data;
-        })
-        .catch(error => console.log("Error loading header: ", error));
-</script>
 
 <!-- Hero Section -->
 <section id="jobs-hero">
