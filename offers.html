@@ -24,6 +24,7 @@
             .catch(error => console.log("Error loading header: ", error));
     </script>
 
+<<<<<<< HEAD
     <section id="job-details">
         <h1>English Teacher in Spain</h1>
         <p><b>Location:</b> Barcelona, Spain</p>
@@ -55,6 +56,194 @@
         <a href="mailto:contact@jobsun.dk?subject=Application for English Teacher Position" class="btn">Apply Now</a>
     </section>
 
+=======
+<!-- Header -->
+<div id="header-container"></div>
+<script>
+    // Dynamically load the header
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        })
+        .catch(error => console.log("Error loading header: ", error));
+</script>
+
+<!-- Hero Section -->
+<section id="jobs-hero">
+    <h1>Explore Job Opportunities</h1>
+    <p>Take a ride with our team and embark on an exciting career adventure <br>in stunning Mediterranean locations!</p>
+</section>
+
+    <!-- Filter Menu -->
+    <section id="filters">
+        <div class="filter-dropdowns">
+            <div class="filter-dropdown">
+                <select name="language">
+                    <option value="">Select Language</option>
+                    <option value="greek">Danish</option>
+                    <option value="spanish">Finnish</option>
+                    <option value="catalan">Norwegian</option>
+                    <option value="catalan">Swedish</option>
+                </select>
+            </div>
+            <div class="filter-dropdown">
+                <select name="location">
+                    <option value="">Select Location</option>
+                    <option value="athens">Athens (Greece)</option>
+                    <option value="crete">Crete (Greece)</option>
+                    <option value="thessaloniki">Thessaloniki (Greece)</option>
+                    <option value="remote">Remote (Greece)</option>
+                    <option value="barcelona">Barcelona (Spain)</option>
+                    <option value="thessaloniki">Essen (Germany)</option>
+                </select>
+            </div>
+            <div class="filter-dropdown">
+                <select name="role">
+                    <option value="">Select Role</option>
+                    <option value="support-specialist">AI Data Analyst</option>                    
+                    <option value="customer-service">Customer Service</option>
+                    <option value="support-specialist">Sales Manager</option>
+                    <option value="support-specialist">Support Specialist</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+   <!-- Job Listings -->
+   <section id="jobs">
+    <div class="job-list">
+        <!-- Job 1: Athens -->
+        <a href="jobexemple.html" class="job-link">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/athens1.jpg" alt="Athens job">
+                </div>
+                <div class="job-content">
+                    <h3>Customer Service Representative</h3>
+                    <p class="description">Provide top-tier support to clients in a vibrant Athens office.</p>
+                    <div class="job-details">
+                        <span><span class="icon">🗺️</span>Athens</span>
+                        <span><span class="icon">💬</span>Danish</span>
+                        <span><span class="icon">💼</span>Full-time</span>
+                    </div>
+                    <div class="job-actions">
+                         <span class="relocation-btn">Relocation package</span>
+                         <span class="flight-btn">Flight ticket</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Job 2: Crete -->
+        <a href="#" class="job-link">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/island1.jpg" alt="Crete job">
+                </div>
+                <div class="job-content">
+                    <h3>Customer Support Specialist</h3>
+                    <p class="description">Assist customers with inquiries in a sunny Crete location.</p>
+                    <div class="job-details">
+                        <span><span class="icon">🗺️</span>Crete</span>
+                        <span><span class="icon">💬</span>Norwegian</span>
+                        <span><span class="icon">💼</span>Full-time</span>
+                    </div>
+                    <div class="job-actions">
+                         <span class="accommodation-btn">Free Accommodation</span>
+                         <span class="flight-btn">Flight ticket</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Job 3: Remote -->
+        <a href="#" class="job-link">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/delfi1.png" alt="Remote job">
+                </div>
+                <div class="job-content">
+                    <h3>Remote Customer Service Agent</h3>
+                    <p class="description">Work from anywhere to support global clients remotely.</p>
+                    <div class="job-details">
+                        <span><span class="icon">🗺️</span>Remote</span>
+                        <span><span class="icon">💬</span>Swedish</span>
+                        <span><span class="icon">💼</span>Full-time</span>
+                    </div>
+                    <div class="job-actions">
+                         <span class="relocation-btn">Relocation package</span>
+                         <span class="flight-btn">Flight ticket</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Job 4: Barcelona -->
+        <a href="#" class="job-link">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/barcelona1.jpg" alt="Barcelona job">
+                </div>
+                <div class="job-content">
+                    <h3>Customer Care Associate</h3>
+                    <p class="description">Deliver exceptional service in the dynamic city of Barcelona.</p>
+                    <div class="job-details">
+                        <span><span class="icon">🗺️</span>Barcelona</span>
+                        <span><span class="icon">💬</span>Danish</span>
+                        <span><span class="icon">💼</span>Full-time</span>
+                    </div>
+                    <div class="job-actions">
+                         <span class="relocation-btn">Relocation package</span>
+                         <span class="flight-btn">Flight ticket</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- Job 5: Thessaloniki -->
+        <a href="#" class="job-link">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/thessaloniki1.jpg" alt="Thessaloniki job">
+                </div>
+                <div class="job-content">
+                    <h3>Client Support Officer</h3>
+                    <p class="description">Support clients in a thriving Thessaloniki hub.</p>
+                    <div class="job-details">
+                        <span><span class="icon">🗺️</span>Thessaloniki</span>
+                        <span><span class="icon">💬</span>Finnish</span>
+                        <span><span class="icon">💼</span>Full-time</span>
+                    </div>
+                    <div class="job-actions">
+                         <span class="relocation-btn">Relocation package</span>
+                         <span class="flight-btn">Flight ticket</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+                <!-- Job 6: Essen -->
+        <a href="#" class="job-link">
+            <div class="job-card">
+                <div class="job-image">
+                    <img src="images/essen.webp" alt="Essen job">
+                </div>
+                <div class="job-content">
+                    <h3>AI Entry Analyst</h3>
+                    <p class="description">Train and analyze the future of AI.</p>
+                    <div class="job-details">
+                        <span><span class="icon">🗺️</span>Essen</span>
+                        <span><span class="icon">💬</span>Danish</span>
+                        <span><span class="icon">💼</span>Full-time</span>
+                    </div>
+                    <div class="job-actions">
+                         <span class="relocation-btn">Relocation package</span>
+                         <span class="flight-btn">Flight ticket</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+>>>>>>> 9677fbf (Initial commit)
     <div id="footer-container"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function() {

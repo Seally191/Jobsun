@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Representative - Athens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
+    <link rel="manifest" href="images/favicon_io/site.webmanifest">
+</head>
+<body>
+
+    <!-- Header -->
+    <div id="header-container"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data)
+            .catch(error => console.log("Error loading header: ", error));
+    </script>
+
+    <!-- Job Hero -->
+    <section id="jobs-hero">
+        <h1>Customer Service Representative</h1>
+        <p>Based in Athens, Greece — Full-time role with relocation package and flight ticket included.</p>
+    </section>
+
+    <!-- Job Details Section -->
+    <section id="job-details-page">
+        <div class="job-detail-card">
+            <div class="job-detail-image">
+                <img src="images/athens1.jpg" alt="Athens job">
+            </div>
+            <div class="job-detail-content">
+                <div class="job-meta">
+                    <span><span class="icon">🗺️</span>Athens</span>
+                    <span><span class="icon">💬</span>Danish</span>
+                    <span><span class="icon">💼</span>Full-time</span>
+                </div>
+                <div class="job-benefits">
+                    <span class="relocation-btn">Relocation package</span>
+                    <span class="flight-btn">Flight ticket</span>
+                </div>
+                <h2>About the Role</h2>
+                <p>
+                    We are seeking a passionate and detail-oriented Customer Service Representative to join our growing team in Athens. You will handle client inquiries, resolve issues, and ensure every customer has a positive experience.
+                </p>
+
+                <h2>Responsibilities</h2>
+                <ul>
+                    <li>Respond to customer inquiries via phone, email, and chat.</li>
+                    <li>Provide accurate product and service information.</li>
+                    <li>Document and escalate issues when needed.</li>
+                    <li>Collaborate with the team to improve processes.</li>
+                </ul>
+
+                <h2>Requirements</h2>
+                <ul>
+                    <li>Fluency in Danish and good English skills.</li>
+                    <li>Previous customer service experience preferred.</li>
+                    <li>Strong communication and problem-solving skills.</li>
+                    <li>Ability to work full-time on-site in Athens.</li>
+                </ul>
+
+                <h2>Benefits</h2>
+                <ul>
+                    <li>Relocation assistance to Athens.</li>
+                    <li>Flight ticket provided.</li>
+                    <li>Competitive salary package.</li>
+                    <li>Ongoing training and career development.</li>
+                </ul>
+
+                <a href="apply.html" class="apply-btn">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data)
+            .catch(error => console.log("Error loading footer:", error));
+    </script>
+
+</body>
+</html>
