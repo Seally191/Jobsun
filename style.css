@@ -1140,7 +1140,6 @@ form button:hover {
     aspect-ratio: 4 / 1; /* Enforces 3:1 aspect ratio for banner shape */
     height: auto; /* Maintains responsiveness */
     object-fit: cover; /* Crops image to fit the banner aspect ratio */
-    border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
@@ -1208,106 +1207,231 @@ form button:hover {
     transform: scale(1.05);
 }
 
-/* Job Description Section */
-.job-description {
-    text-align: center; /* Center content, matching #pillars */
-    padding: 0 10% 20px; /* Similar padding to #pillars, with bottom padding for spacing */
-    margin-top: 50px;
-    margin-bottom: 60px;
-    background-color: #f4f8fc; /* Matches #pillars background */
-    display: flex; /* Use flexbox for row layout */
-    flex-wrap: wrap; /* Allow wrapping for responsiveness */
-    justify-content: center; /* Center items in the row */
-    gap: 20px; /* Spacing between job-description1 blocks */
+#job-description1 h2, #job-description3 h2 {
+    font-family: 'TAN MERINGUE', sans-serif; 
+    font-size: 1.75rem; 
+    color: #12609d; 
+    margin-bottom: 15px; 
+    text-align: center; 
 }
 
-/* Individual Job Description Blocks */
-.job-description1 {
-    background: white; /* Matches .pillar background */
-    padding: 20px; /* Matches .pillar padding */
-    border-radius: 10px; /* Matches .pillar border-radius */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Matches .pillar shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Matches .pillar transition */
-    flex: 1 1 calc(50% - 20px); /* Two per row with gap accounted for */
-    max-width: calc(50% - 20px); /* Ensure two per row with gap */
-    text-align: left; /* Left-align text for readability */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+#job-description1 p, #job-description3 p {
+    font-size: 1rem;
+    color: #12609d;
+    line-height: 1.6;
 }
 
-/* Hover effect for interactivity */
-.job-description1:hover {
-    transform: translateY(-5px); /* Matches .pillar hover */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Matches .pillar hover */
+#job-description2 h2, #job-description4 h2 {
+    font-family: 'TAN MERINGUE', sans-serif; 
+    font-size: 1.75rem; 
+    color: white; 
+    margin-bottom: 15px; 
+    text-align: center; 
 }
 
-/* Headings */
-.job-description1 h2 {
-    font-family: 'TAN MERINGUE', sans-serif; /* Matches #pillars h2 */
-    font-size: 1.75rem; /* Matches #pillars h2 */
-    color: #12609d; /* Matches #pillars h2 */
-    margin-bottom: 15px; /* Slightly less than #pillars h2 for tighter spacing */
-    text-align: center; /* Matches #pillars h2 */
+#job-description2 p, #job-description4 p {
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Job Description Container 
+#hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 80px 10% 20px; 
+    background: white;
+    min-height: 60vh; 
+    gap: 60px;
+}
+
+#hero img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+*/
+
+/* Section 1: Vacancy */
+#job-description1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 40px 10% 40px; 
+    background: #f4f8fc; 
+    min-height: 60vh; 
+    gap: 60px;
+}
+
+#job-description1 img {
+    max-width: 80%;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section 2: Company Description */
+#job-description2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 40px 10% 40px; 
+    background: #12609d;
+    min-height: 60vh; 
+    gap: 60px;
+}
+
+/* Section 3: Requirements重建
+
+System: Requirements and Benefits */
+#job-description3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 40px 10% 40px; 
+    background: #f4f8fc; 
+    min-height: 60vh; 
+    gap: 60px;
+}
+
+/* Section 4: Location */
+#job-description4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 40px 10% 40px; 
+    background: #12609d; 
+    min-height: 60vh; 
+    gap: 60px;
+}
+
+/* Text Styling */
+.job-description .text h2 {
+    font-family: 'TAN MERINGUE', sans-serif;
+    font-size: 1.75rem;
+    color: #12609d;
+    margin-bottom: 15px;
+    text-align: left; /* Align left like #hero */
 }
 
 /* Paragraphs */
-.job-description1 p {
-    font-size: 0.85rem; /* Matches .pillar p */
-    color: #0b385e; /* Matches .pillar p */
-    line-height: 1.5; /* Matches .pillar p */
-    margin-bottom: 15px; /* Consistent spacing */
+.job-description .text p {
+    font-size: 1rem; /* Matches #hero p */
+    color: #0b385e;
+    line-height: 1.6; /* Matches #hero p */
+    margin-bottom: 15px;
+    max-width: 500px; /* Matches #hero p */
 }
 
 /* Lists */
-.job-description1 ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 30px; /* Space for custom icon */
+.job-description .text ul {
+    list-style: none;
+    padding-left: 20px;
     margin-bottom: 15px;
 }
 
-.job-description1 li {
-    font-size: 0.85rem;
+.job-description .text li {
+    font-size: 1rem; /* Matches #hero p */
     color: #0b385e;
-    line-height: 1.5;
-    margin-bottom: 8px;
-    position: relative; /* For positioning the icon */
-    padding-left: 25px; /* Space for icon */
+    line-height: 1.6; /* Consistent with paragraphs */
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
 }
 
-.job-description1 li::before {
+.job-description .text li::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 4px; /* Adjust to align with text */
-    width: 16px; /* Icon size */
+    top: 4px;
+    width: 16px;
     height: 16px;
-    background-image: url('/images/right-arrow.png'); /* Update with your icon path */
+    background-image: url('/images/right-arrow.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/* Responsive */
+/* Location Images */
+.location-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.location-images img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.location-images img:hover {
+    transform: scale(1.05); /* Matches #hero .btn hover */
+}
+
+/* Responsive Design */
 @media (max-width: 992px) {
-    .job-description {
-        padding: 0 5% 20px; /* Reduce padding for smaller screens */
+    #job-description1,
+    #job-description2,
+    #job-description3,
+    #job-description4 {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
     }
 
-    .job-description1 {
-        flex: 1 1 calc(50% - 20px); /* Maintain two per row */
-        max-width: calc(50% - 20px); /* Maintain two per row */
+    .job-description .text p,
+    .job-description .text ul {
+        max-width: 100%;
+    }
+
+    .job-description .photo img,
+    .job-description .video iframe,
+    .job-description .video1 iframe {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .location-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-images img {
+        max-width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .job-description {
-        padding: 0 3% 20px; /* Further reduce padding for mobile */
+    #job-description1,
+    #job-description2,
+    #job-description3,
+    #job-description4 {
+        padding: 30px 3%;
     }
 
-    .job-description1 {
-        flex: 1 1 100%; /* Stack to one per row on mobile */
-        max-width: 95%; /* Nearly full width for mobile */
+    .job-description .text h2 {
+        font-size: 1.5rem;
     }
 
-    .job-description1 h2 {
-        font-size: 1.5rem; /* Slightly smaller for mobile */
+    .job-description .video iframe,
+    .job-description .video1 iframe {
+        height: 200px;
     }
 }
