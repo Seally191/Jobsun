@@ -1,9 +1,11 @@
+<!-- articles.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Articles on Working Abroad | Embrace Your Potential</title>
+    <meta name="description" content="Discover insightful articles on job opportunities abroad, cultural experiences, relocation tips, and career growth in sunny Mediterranean destinations.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
     <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
@@ -11,9 +13,8 @@
 </head>
 <body>
 
-    <!-- Container for header loaded dynamically -->
     <div id="header-container"></div>
-    
+
     <script>
         // Dynamically load the header
         fetch('header.html')
@@ -24,31 +25,43 @@
             .catch(error => console.log("Error loading header: ", error));
     </script>
 
-    <section id="blog">
-        <h1>Our Blog</h1>
-        <p>Stay updated with the latest tips, news, and stories from Jobsun.</p>
+    <!-- Articles Section -->
+    <section id="articles">
+        <h1>Our Latest Articles</h1>
+        <p>Explore tips, stories, and insights on working abroad, cultural immersion, and career adventures in beautiful destinations.</p>
         
-        <div class="blog-posts">
-            <article class="blog-post">
-                <h2><a href="blog-post1.html">How to Find Your Dream Job Abroad</a></h2>
-                <p class="date">Posted on January 15, 2025</p>
-                <p>A few tips and insights on how to prepare for your career abroad. The adventure starts with the right job. Read more...</p>
-                <a href="blog-post1.html" class="btn">Read More</a>
-            </article>
-
-            <article class="blog-post">
-                <h2><a href="blog-post2.html">The Benefits of Moving to a Mediterranean Country</a></h2>
-                <p class="date">Posted on January 12, 2025</p>
-                <p>Discover the incredible benefits of living in sunny Mediterranean countries and how it can improve both your work and personal life.</p>
-                <a href="blog-post2.html" class="btn">Read More</a>
-            </article>
-
-            <article class="blog-post">
-                <h2><a href="blog-post3.html">How to Navigate Cultural Differences in the Workplace</a></h2>
-                <p class="date">Posted on January 10, 2025</p>
-                <p>Adapting to a new culture can be challenging but rewarding. Here's a guide to help you navigate cultural differences in the workplace.</p>
-                <a href="blog-post3.html" class="btn">Read More</a>
-            </article>
+        <div class="carousel-container">
+            <div class="carousel">
+                <!-- Article 1 -->
+                <div class="article-card">
+                    <img src="images/article1.png" alt="Professional growth in a new country">
+                    <h3>Unlocking Professional Growth Abroad</h3>
+                    <p>Discover how relocating to a sunny Mediterranean spot can boost your career. From learning new skills to building an international network...</p>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="article-card">
+                    <img src="images/article2.png" alt="Benefits of Mediterranean lifestyle">
+                    <h3>The Health Benefits of Mediterranean Living</h3>
+                    <p>Experience how the warm climate and fresh air enhance your well-being. Sunshine isn't just for vacations—it's a daily mood booster...</p>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="article-card">
+                    <img src="images/article3.png" alt="Embracing new cultures abroad">
+                    <h3>Embracing Diverse Cultures in Your New Home</h3>
+                    <p>From vibrant markets to relaxed lifestyles, diving into Mediterranean cultures sharpens your adaptability and communication skills...</p>
+                </div>
+                
+                <!-- Article 4 -->
+                <div class="article-card">
+                    <img src="images/article4.png" alt="Relocation guidance and tips">
+                    <h3>Essential Relocation Tips for a Smooth Move</h3>
+                    <p>Our guide covers everything from packing essentials to settling in. With our support, your transition abroad will be seamless...</p>
+                </div>
+            </div>
+            <button class="prev-btn">&#10094;</button>
+            <button class="next-btn">&#10095;</button>
         </div>
     </section>
 
@@ -63,6 +76,6 @@
     </script> 
     
     <script src="script.js"></script>
-
+    <script src="articles.js"></script>
 </body>
 </html>
