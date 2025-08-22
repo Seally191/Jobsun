@@ -1207,7 +1207,7 @@ form button:hover {
     transform: scale(1.05);
 }
 
-#job-description1 h2, #job-description3 h2 {
+#job-description1 h2, #job-description3 h2, #job-description5 h2 {
     font-family: 'TAN MERINGUE', sans-serif; 
     font-size: 1.75rem; 
     color: #12609d; 
@@ -1215,7 +1215,7 @@ form button:hover {
     text-align: center; 
 }
 
-#job-description1 p, #job-description3 p {
+#job-description1 p, #job-description3 p, #job-description5 p {
     font-size: 1rem;
     color: #12609d;
     line-height: 1.6;
@@ -1316,6 +1316,19 @@ System: Requirements and Benefits */
     background: #12609d; 
     min-height: 60vh; 
     gap: 60px;
+}
+
+/* Section 5: See also */
+#job-description5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 10px 5% 10px; 
+    background: #f4f8fc; 
+    min-height: 60vh; 
+    gap: 0px;
 }
 
 /* Text Styling */
